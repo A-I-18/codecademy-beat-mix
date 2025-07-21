@@ -5,6 +5,8 @@ const things = require('chai-things');
 chai.use(things);
 const expect = chai.expect;
 
+const pathModule = require('path');
+
 // Getters in case drum arrays are reassigned
 
 const drums = {
@@ -26,13 +28,15 @@ describe('Beat Mix Problem Set - script.js file', () => {
 
   let drumArrays;
   let code;
+  let relativePath = 'public/js/script.js';
+  let absolutePath = pathModule.join(__dirname, '..', relativePath);
   before('load script.js', (done) => {
-    fs.readFile('public/js/script.js', (err, data) => {
+    fs.readFile(relativePath, (err, data) => {
       if (err) {
         throw err;
       }
       code = data;
-      vm.runInThisContext(code);
+      vm.runInThisContext(code, { filename: absolutePath });
       drumArrays = [kicks, snares, hiHats, rideCymbals];
       done();
     });
