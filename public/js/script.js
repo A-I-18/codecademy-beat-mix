@@ -47,3 +47,27 @@ function clear(arrayName) {
         toBeCleared.forEach((element, index, array) => array[index] = false);
     }
 }
+
+function invert(arrayName) {
+    let toBeInverted;
+
+    switch (arrayName) {
+        case 'kicks':
+            toBeInverted = kicks;
+            break;
+        case 'snares':
+            toBeInverted = snares;
+            break;
+        case 'hiHats':
+            toBeInverted = hiHats;
+            break;
+        case 'rideCymbals':
+            toBeInverted = rideCymbals;
+            break;
+    }
+
+    if (toBeInverted) {
+        toBeInverted.forEach((element, index, array) => array[index] = !element);
+    }
+}
+
