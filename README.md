@@ -17,7 +17,7 @@ To start, download the starting code for this project <a href="https://s3.amazon
 
 Once you have the project downloaded, you'll need to run some terminal commands to get the application started. First, open the root project directory in your terminal. Run `npm install` to install the dependencies of this project. Once it has finished installing, you can run `npm run start` to begin your server. You'll see `Server listening on port 4001` in the terminal. You'll have to have your server running to ensure that the code you write runs correctly and that you get to hear your drum beats! You can end your server process with a Ctrl + C shortcut in the terminal window.
 
-To see the application in its initial, non-working state, simply open **index.html** in a web browser. You will be writing JavaScript code that uses new syntax (you will learn more about this later). You should use [Google Chrome](https://www.google.com/chrome/browser/desktop/index.html) (at least version 60) or [Firefox](https://www.mozilla.org/en-US/firefox/new/) (at least version 55). If your version of Chrome or Firefox is too old, correctly-written code may still not run as expected. The links above will let you download the latest release of either browser if you do not have it or are unsure of which version you're running.
+To see the application in its initial, non-working state, simply open **index.html** in a web browser. You will be writing JavaScript code that uses modern ES6 syntax. You should use [Google Chrome](https://www.google.com/chrome/browser/desktop/index.html) (at least version 60) or [Firefox](https://www.mozilla.org/en-US/firefox/new/) (at least version 55). If your version of Chrome or Firefox is too old, correctly-written code may still not run as expected. The links above will let you download the latest release of either browser if you do not have it or are unsure of which version you're running.
 
 ## Implementation Details
 
@@ -56,4 +56,3 @@ about whether or not each test passed. After this list, you will see more specif
 about why each failing test failed.
 
 As you implement functionality, run the tests to ensure you are creating correctly named variables and functions that return the proper values. The tests will additionally help you identify edge cases that you may not have anticipated when first writing the functions.
-
