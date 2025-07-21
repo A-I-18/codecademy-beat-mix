@@ -71,3 +71,24 @@ function invert(arrayName) {
     }
 }
 
+function isOutsideSquareGrid(x, y, size) {
+    return x < 0 || x >= size || y < 0 || y >= size;
+}
+
+function getNeighborPads(x, y, size) {
+    let neighborPads = [];
+
+    if (isOutsideSquareGrid(x, y, size)) {
+        return neighborPads;
+    }
+    
+    neighborPads.push([x - 1, y]); //left
+    neighborPads.push([x + 1, y]); //right
+    neighborPads.push([x, y + 1]); //above
+    neighborPads.push([x, y - 1]); //below
+
+    // Remove invalid neighbor pads
+    neighborPads = neighborPads.filter(([x, y]) => !isOutsideSquareGrid(x, y, size));
+
+    return neighborPads;
+}
