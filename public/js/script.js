@@ -24,3 +24,26 @@ function toggleDrum(arrayName, index) {
             break;
     }
 }
+
+function clear(arrayName) {
+    let toBeCleared;
+
+    switch (arrayName) {
+        case 'kicks':
+            toBeCleared = kicks;
+            break;
+        case 'snares':
+            toBeCleared = snares;
+            break;
+        case 'hiHats':
+            toBeCleared = hiHats;
+            break;
+        case 'rideCymbals':
+            toBeCleared = rideCymbals;
+            break;
+    }
+
+    if (toBeCleared) {
+        toBeCleared.forEach((element, index, array) => array[index] = false);
+    }
+}
